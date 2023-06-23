@@ -1,4 +1,4 @@
-from gitfiti import str_to_sprite, ONEUP_STR
+from DOOM import str_to_sprite, ONEUP_STR
 
 
 SYMBOLS = '''

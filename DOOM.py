@@ -4,7 +4,7 @@
 # released under The MIT license (MIT) http://opensource.org/licenses/MIT
 #
 """
-gitfiti
+DOOM
 
 noun : Carefully crafted graffiti in a GitHub commit history calendar
 """
@@ -31,157 +31,26 @@ except NameError:
 
 
 GITHUB_BASE_URL = 'https://github.com/'
-FALLBACK_IMAGE = 'kitty'
+FALLBACK_IMAGE = 'mask'
 
 
 TITLE = '''
-          _ __  _____ __  _
-   ____ _(_) /_/ __(_) /_(_)
-  / __ `/ / __/ /_/ / __/ /
- / /_/ / / /_/ __/ / /_/ /
- \__, /_/\__/_/ /_/\__/_/
-/____/
+______  _____  _____ ___  ___
+|  _  \|  _  ||  _  ||  \/  |
+| | | || | | || | | || .  . |
+| | | || | | || | | || |\/| |
+| |/ / \ \_/ /\ \_/ /| |  | |
+|___/   \___/  \___/ \_|  |_/
 '''
 
-
-KITTY = [
-  [0,0,0,4,0,0,0,0,4,0,0,0],
-  [0,0,4,2,4,4,4,4,2,4,0,0],
-  [0,0,4,2,2,2,2,2,2,4,0,0],
-  [2,2,4,2,4,2,2,4,2,4,2,2],
-  [0,0,4,2,2,3,3,2,2,4,0,0],
-  [2,2,4,2,2,2,2,2,2,4,2,2],
-  [0,0,0,3,4,4,4,4,3,0,0,0],
-]
-
-ONEUP = [
-  [0,4,4,4,4,4,4,4,0],
-  [4,3,2,2,1,2,2,3,4],
-  [4,2,2,1,1,1,2,2,4],
-  [4,3,4,4,4,4,4,3,4],
-  [4,4,1,4,1,4,1,4,4],
-  [0,4,1,1,1,1,1,4,0],
-  [0,0,4,4,4,4,4,0,0],
-]
-
-ONEUP2 = [
-  [0,0,4,4,4,4,4,4,4,0,0],
-  [0,4,2,2,1,1,1,2,2,4,0],
-  [4,3,2,2,1,1,1,2,2,3,4],
-  [4,3,3,4,4,4,4,4,3,3,4],
-  [0,4,4,1,4,1,4,1,4,4,0],
-  [0,0,4,1,1,1,1,1,4,0,0],
-  [0,0,0,4,4,4,4,4,0,0,0],
-]
-
-HACKERSCHOOL = [
-  [4,4,4,4,4,4],
-  [4,3,3,3,3,4],
-  [4,1,3,3,1,4],
-  [4,3,3,3,3,4],
-  [4,4,4,4,4,4],
-  [0,0,4,4,0,0],
-  [4,4,4,4,4,4],
-]
-
-OCTOCAT = [
-  [0,0,0,4,0,0,0,4,0],
-  [0,0,4,4,4,4,4,4,4],
-  [0,0,4,1,3,3,3,1,4],
-  [4,0,3,4,3,3,3,4,3],
-  [0,4,0,0,4,4,4,0,0],
-  [0,0,4,4,4,4,4,4,4],
-  [0,0,4,0,4,0,4,0,4],
-]
-
-OCTOCAT2 = [
-  [0,0,4,0,0,4,0],
-  [0,4,4,4,4,4,4],
-  [0,4,1,3,3,1,4],
-  [0,4,4,4,4,4,4],
-  [4,0,0,4,4,0,0],
-  [0,4,4,4,4,4,0],
-  [0,0,0,4,4,4,0],
-]
-
-HELLO = [
-  [0,1,0,0,0,0,0,0,0,1,0,1,0,0,0,0,0,4],
-  [0,2,0,0,0,0,0,0,0,2,0,2,0,0,0,0,0,4],
-  [0,3,3,3,0,2,3,3,0,3,0,3,0,1,3,1,0,3],
-  [0,4,0,4,0,4,0,4,0,4,0,4,0,4,0,4,0,3],
-  [0,3,0,3,0,3,3,3,0,3,0,3,0,3,0,3,0,2],
-  [0,2,0,2,0,2,0,0,0,2,0,2,0,2,0,2,0,0],
-  [0,1,0,1,0,1,1,1,0,1,0,1,0,1,1,1,0,4],
-]
-
-HEART1 = [
-  [0,1,1,0,1,1,0],
-  [1,3,3,1,3,3,1],
-  [1,3,4,3,4,3,1],
-  [1,3,4,4,4,3,1],
-  [0,1,3,4,3,1,0],
-  [0,0,1,3,1,0,0],
-  [0,0,0,1,0,0,0],        
-]
-
-HEART2 = [
-  [0,5,5,0,5,5,0],
-  [5,3,3,5,3,3,5],
-  [5,3,1,3,1,3,5],
-  [5,3,1,1,1,3,5],
-  [0,5,3,1,3,5,0],
-  [0,0,5,3,5,0,0],
-  [0,0,0,5,0,0,0],        
-]
-
-HIREME = [
-  [1,0,0,0,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],
-  [2,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],
-  [3,3,3,0,2,0,3,3,3,0,2,3,3,0,0,3,3,0,3,0,0,2,3,3],
-  [4,0,4,0,4,0,4,0,0,0,4,0,4,0,0,4,0,4,0,4,0,4,0,4],
-  [3,0,3,0,3,0,3,0,0,0,3,3,3,0,0,3,0,3,0,3,0,3,3,3],
-  [2,0,2,0,2,0,2,0,0,0,2,0,0,0,0,2,0,2,0,2,0,2,0,0],
-  [1,0,1,0,1,0,1,0,0,0,1,1,1,0,0,1,0,1,0,1,0,1,1,1],
-]
-
-BEER = [
-  [0,0,0,0,0,0,0,3,3,3,0,0,3,3,3,0,3,3,3,0,3,3,3,0,0],
-  [0,0,1,1,1,1,0,3,0,0,3,0,3,0,0,0,3,0,0,0,3,0,0,3,0],
-  [0,2,2,2,2,2,0,3,0,0,3,0,3,0,0,0,3,0,0,0,3,0,0,3,0],
-  [2,0,2,2,2,2,0,3,3,3,0,0,3,3,3,0,3,3,3,0,3,3,3,0,0],
-  [2,0,2,2,2,2,0,3,0,0,3,0,3,0,0,0,3,0,0,0,3,0,3,0,0],
-  [0,2,2,2,2,2,0,3,0,0,3,0,3,0,0,0,3,0,0,0,3,0,0,3,0],
-  [0,0,2,2,2,2,0,3,3,3,0,0,3,3,3,0,3,3,3,0,3,0,0,3,0],
-]
-
-GLIDERS = [
-  [0,0,0,4,0,4,0,0,0,0,4,0,0,0],
-  [0,4,0,4,0,0,4,4,0,0,0,4,0,0],
-  [0,0,4,4,0,4,4,0,0,4,4,4,0,0],
-  [0,0,0,0,0,0,0,0,0,0,0,0,0,0],
-  [0,4,0,4,0,0,0,4,0,0,0,0,0,0],
-  [0,0,4,4,0,4,0,4,0,0,0,0,0,0],
-  [0,0,4,0,0,0,4,4,0,0,0,0,0,0],
-]
-
-HEART = [
-  [0,4,4,0,4,4,0],
-  [4,2,2,4,2,2,4],
-  [4,2,2,2,2,2,4],
-  [4,2,2,2,2,2,4],
-  [0,4,2,2,2,4,0],
-  [0,0,4,2,4,0,0],
-  [0,0,0,4,0,0,0],
-]
-
-HEART_SHINY = [
-  [0,4,4,0,4,4,0],
-  [4,2,0,4,2,2,4],
-  [4,0,2,2,2,2,4],
-  [4,2,2,2,2,2,4],
-  [0,4,2,2,2,4,0],
-  [0,0,4,2,4,0,0],
-  [0,0,0,4,0,0,0],
+MASK = [
+    [0,0,1,1,1,0,0],
+    [0,1,1,3,1,1,0],
+    [1,2,2,1,2,2,1],
+    [1,0,0,2,0,0,1],
+    [1,1,1,2,1,1,1],
+    [1,1,0,0,0,1,1],
+    [0,1,0,0,0,1,0]
 ]
 
 ASCII_TO_NUMBER = {
@@ -224,21 +93,7 @@ ONEUP_STR = str_to_sprite('''
 
 
 IMAGES = {
-  'kitty': KITTY,
-  'oneup': ONEUP,
-  'oneup2': ONEUP2,
-  'hackerschool': HACKERSCHOOL,
-  'octocat': OCTOCAT,
-  'octocat2': OCTOCAT2,
-  'hello': HELLO,
-  'heart1': HEART1,
-  'heart2': HEART2,
-  'hireme': HIREME,
-  'oneup_str': ONEUP_STR,
-  'beer': BEER,
-  'gliders': GLIDERS,
-  'heart' : HEART, 
-  'heart_shiny' : HEART_SHINY,
+  'mask' : MASK,
 }
 
 SHELLS = {
@@ -356,12 +211,12 @@ def generate_values_in_date_order(image, multiplier=1):
 def commit(commitdate, shell):
     template_bash = (
         '''GIT_AUTHOR_DATE={0} GIT_COMMITTER_DATE={1} '''
-        '''git commit --allow-empty -m "gitfiti" > /dev/null\n'''
+        '''git commit --allow-empty -m "DOOM" > /dev/null\n'''
     )
     
     template_powershell = (
         '''$Env:GIT_AUTHOR_DATE="{0}"\n$Env:GIT_COMMITTER_DATE="{1}"\n'''
-        '''git commit --allow-empty -m "gitfiti" | Out-Null\n'''
+        '''git commit --allow-empty -m "DOOM" | Out-Null\n'''
     )
 
     template = template_bash if shell == 'bash' else template_powershell
@@ -377,8 +232,8 @@ def fake_it(image, start_date, username, repo, git_url, shell, offset=0, multipl
         'cd $REPO\n'
         'touch README.md\n'
         'git add README.md\n'
-        'touch gitfiti\n'
-        'git add gitfiti\n'
+        'touch DOOM\n'
+        'git add DOOM\n'
         '{1}\n'
         'git branch -M main\n'
         'git remote add origin {2}:{3}/$REPO.git\n'
@@ -393,8 +248,8 @@ def fake_it(image, start_date, username, repo, git_url, shell, offset=0, multipl
         'cd $REPO\n'
         'New-Item README.md -ItemType file | Out-Null\n'
         'git add README.md\n'
-        'New-Item gitfiti -ItemType file | Out-Null\n'
-        'git add gitfiti\n'
+        'New-Item DOOM -ItemType file | Out-Null\n'
+        'git add DOOM\n'
         '{1}\n'
         'git branch -M main\n'
         'git remote add origin {2}:{3}/$REPO.git\n'
@@ -442,7 +297,7 @@ def main():
     m = calculate_multiplier(max_daily_commits)
 
     repo = request_user_input(
-        'Enter the name of the repository to use by gitfiti: ')
+        'Enter the name of the repository to use by DOOM: ')
 
     offset = request_user_input(
         'Enter the number of weeks to offset the image (from the left): ')
@@ -450,18 +305,18 @@ def main():
     offset = int(offset) if offset.strip() else 0
 
     print((
-        'By default gitfiti.py matches the darkest pixel to the highest\n'
+        'By default DOOM.py matches the darkest pixel to the highest\n'
         'number of commits found in your GitHub commit/activity calendar,\n'
         '\n'
         'Currently this is: {0} commits\n'
         '\n'
-        'Enter the word "gitfiti" to exceed your max\n'
+        'Enter the word "DOOM" to exceed your max\n'
         '(this option generates WAY more commits)\n'
         'Any other input will cause the default matching behavior'
     ).format(max_daily_commits))
     match = request_user_input()
 
-    match = m if (match == 'gitfiti') else 1
+    match = m if (match == 'DOOM') else 1
 
     print('Enter file(s) to load images from (blank if not applicable)')
     img_names = request_user_input().split(' ')
@@ -469,7 +324,7 @@ def main():
     loaded_images = load_images(img_names)
     images = dict(IMAGES, **loaded_images)
 
-    print('Enter the image name to gitfiti')
+    print('Enter the image name to DOOM')
     print('Images: ' + ', '.join(images.keys()))
     image = request_user_input()
 
@@ -499,7 +354,7 @@ def main():
     output = fake_it(image, start_date, username, repo, git_url, shell, offset,
                      fake_it_multiplier)
 
-    output_filename = 'gitfiti.{}'.format(SHELLS[shell])
+    output_filename = 'DOOM.{}'.format(SHELLS[shell])
     save(output, output_filename)
     print('{} saved.'.format(output_filename))
     print('Create a new(!) repo named {0} at {1} and run the script'.format(repo, git_base))
