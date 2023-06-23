@@ -1,6 +1,8 @@
 # DOOMfiti
 
-Make your commits MF DOOM themed.
+Make your contributions MF DOOM themed.
+
+![grafitti](DOOM.png "grafitti")  
 
 ### Usage
 
