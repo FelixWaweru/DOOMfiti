@@ -2,8 +2,14 @@
  <img width="300px" src="./media/DOOM.png" align="center" alt="Code Fundi" />
  <h2 align="center">DOOMfiti</h2>
  <p align="center">Make your contributions MF DOOM themed. Just remember, all caps when you spell the man name.</p>
- </br>
+ <h2 align="center">See it live!</h2>
 </p>
+
+<p align="center">
+    <a href="https://github.com/MF-DOOM-ALL-CAPS">
+        <img alt="GitHub" src="https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white" />
+    </a>
+    </br>
 </p>
 
 ## Mask Grafitti:
