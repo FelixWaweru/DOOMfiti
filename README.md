@@ -6,9 +6,9 @@ Make your contributions MF DOOM themed.
 
 ### Usage
 
-1. Create a new github repo to store your handiwork.
+1. Create a new, empty github repo to store your handiwork.
 2. Run `DOOM.py` and follow the prompts for username, art selection, offset, and repo name.
-3. Run the generated `DOOMfiti.sh` or `DOOMfiti.ps1` from your home directory (or any non-git tracked dir) and watch it go to work.
+3. Run the generated `DOOM.sh` or `DOOM.ps1` from outside the directory with the generated files (or any non-git tracked dir) and watch it go to work.
 4. Wait... Seriously, you'll probably need to wait a day or two for the DOOMfiti to show in your commit graph.
 
 ### User Templates
